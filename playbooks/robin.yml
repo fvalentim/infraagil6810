@@ -1,0 +1,58 @@
+---
+- name: Playbook do Side Kid
+  hosts: all
+  vars:   # criando variavel usuario valor da variavel nome dick_grayson
+    usuario: dick_grayson
+  tasks: 
+  - name: Verificando Memoria
+    command: free -h #command serve para comando estatico 
+
+  - name: Verificando Usuário
+    shell: cat /etc/passwd | grep vagrant #shell serve para comandos concatenados
+
+  - name: Removendo o Apache2
+    apt:
+      name: apache2
+      state: absent # remocao de pacote
+      update_cache: yes
+    when:  ansible_distribution|lower == "ubuntu"
+
+  - name: Removendo HTTPD
+    yum: 
+     name: httpd
+     state: absent 
+    when: ansible_distribution|lower == "centos"  # |lower serve para remover as letras maiusculas do filtro que voce estiver fazendo tanto como Ubuntu ou CentOS exemplo : ubuntu ou centos
+
+  - name: Garantir Hosts
+    lineinfile:  # pega uma unica linha seta no path
+      path: /etc/hosts
+      create: yes
+      line: " {{item}}" 
+    loop:     #faz a sequencia setada abaixo um de cada vez inserindo no arquivo /etc/hosts
+    - "192.168.99.10 devops.salas4linux.com.br devops"
+    - "192.168.99.20 docker.salas4linux.com.br docker" 
+    - "192.168.99.30 automation.salas4linux.com.br automation"
+   
+  - name: Criando usuario
+    user: name={{usuario}} shell=/bin/bash create_home=yes #comando para criar usuario diferente
+  
+  - name: Enviando arquivos via scp 
+    copy:
+      src: teste.txt      #caminho do arquivo a ser copiado , este está no diretorio atual caso esteja em outro coloque o caminho
+      dest: /tmp/novo_nome.txt  #destino do arquivo
+
+
+  - name: Instalando o NGINX
+    package:
+      name: nginx
+      state: present
+    notify: Restart #gatilho para o handler tomar uma ação 
+      
+  
+  handlers:  # handler sempre rodar ao final ou no começo , sempre alinhado ao tasks , independente do lugar o handle é sempre o ultmo a rodar
+  - name: Restart
+    systemd:          # modulo que chama o systemctl , sistema legado troca o systemd para o service
+      name: nginx
+      state: restarted   # serve para reiniciar o servico apos o ansible ter executado as tasks, handler é sempre o ultima a ser executado
+    
+

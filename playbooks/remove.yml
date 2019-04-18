@@ -1,0 +1,51 @@
+
+- name: Remove
+  hosts: all
+  become: yes
+  tasks:
+  - name: stop service
+    systemd:
+      name: nginx
+      state: stopped
+    ignore_errors: True
+  
+  - name: Ensure nginx package is removed
+    package:
+      name: nginx*
+      state: absent  
+  
+  - name: instalar Apache
+    package:
+      name: ['apache2','libapache2-mod-php7.0','php7.0']
+      state: present
+    when:  ansible_distribution|lower == "ubuntu"
+  
+  - name: instalar HTTPD
+    package:
+       name: ['httpd', 'php']
+       state: present
+    notify: httpd
+    when:  ansible_distribution|lower == "centos"
+  
+  - name: Habilidando Modulo - ubuntu
+    apache2_module:
+       name: php7.0
+       state: present
+    notify: apache2
+    when:  ansible_distribution|lower == "ubuntu"
+  
+  - name: copiando index.php
+    copy:
+      src: index.php
+      dest: /var/www/html/
+
+  handlers:
+  - name: httpd
+    systemd:
+      name: httpd
+      state: restarded
+  
+  - name: apache2
+    systemd: 
+      name: apache2
+      state: restarted  

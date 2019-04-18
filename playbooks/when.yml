@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Instalando o epel-release
+    package:
+      name: epel-release
+      state: present
+    when: ansible_distribution|lower == 'centos'
+  - package:
+      name: ['cowsay', 'sl']
+      state: present

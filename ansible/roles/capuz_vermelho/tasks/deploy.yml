@@ -1,0 +1,10 @@
+- name: Página HTML
+  template:
+    src: index.html
+    dest: /var/www/html/index.html
+
+- name:
+  get_url:
+    url: https://storage.googleapis.com/adm-portal.appspot.com/_assets/files/2012/05/file_5627.jpg
+    dest: /var/www/html/imagem.jpg
+

@@ -1,0 +1,16 @@
+---
+- name: Minha primeira playbook no Ansible
+  hosts: all
+  become: yes
+  tasks:
+  - name: Garantindo a presença do VIM
+    package: 
+      name: vim
+      state: present
+  - name: Cadastrando o Paramahansa Yogananda
+    user: 
+      state: present 
+      name: paramahansa_yogananda
+      shell: /bin/sh
+      password: '$1$KVrPz0dw$dHfp9ZbqH.XkoVqVi.x3w1' 
+...

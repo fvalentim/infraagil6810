@@ -1,0 +1,9 @@
+---
+# tasks file for capuz_vermelho
+- name: Role 42
+  hosts: all
+  tasks:
+    - include: prerequisitos_debian.yml
+    - include: preriquisitos_centos.yml
+    - include: install_nginx.yml
+    - include: deploy.yml

@@ -1,0 +1,309 @@
+    1  apt update
+    2  apt install ansible -y
+    3  apt install python3-pip -y
+    4  pip install ansible --upgrade
+    5  pip3 install ansible --upgrade
+    6  pip install --upgrade pip
+    7  pip3 install --upgrade pip
+    8  pip3.5 install ansible --upgrade
+    9  pip3.5 install ansible cryptography 
+   10  ansible --version
+   11  clear
+   12  ansible --version
+   13  pip3.5 install ansible cryptography --upgrade
+   14  ansible --version
+   15  cd /etc/ansible
+   16  cd /etc/ansible/
+   17  ls
+   18  cd /
+   19  cd /etc /ansible
+   20  cd/ansible
+   21  cd /ansible
+   22  cd/etc/ansible
+   23  cd /ansible
+   24  ls
+   25  cd ansible
+   26  vim hosts
+   27  ssh 198.168.99.10
+   28  ssh 192.168.99.10
+   29  cd 
+   30  ls
+   31  cd .ssh/
+   32  ls
+   33  cat authorized_keys 
+   34  cat known_hosts 
+   35  cd /etc/ansible
+   36  ls
+   37  mkdir roles
+   38  vim.ansible.cfg
+   39  vim ansible.cfg
+   40  vim ansible.cfg]
+   41  cd
+   42  cd /etc/ansible/roles/
+   43  ls
+   44  cd puppet/tasks/
+   45  ls
+   46  > install ubuntu.yml
+   47  clear
+   48  > install_ubuntu.yml
+   49  > install_centos.yml
+   50  ls
+   51  vim prerequisitos.yml
+   52  vim main.yml 
+   53  > tests_yml
+   54  rm -r tests_yml
+   55  ls
+   56  > tests.yml
+   57  vim tests.yml 
+   58  vim install_centos.yml 
+   59  vim install_ubuntu.yml 
+   60  vim main.yml 
+   61  cat main.yml 
+   62  cd ../
+   63  cd tests/
+   64  ls
+   65  cat test.yml 
+   66  vim test.yml 
+   67  ansible-playbook test.yml 
+   68  ls
+   69  cd ../
+   70  ls
+   71  cd tasks/
+   72  ls
+   73  cat main.yml 
+   74  vim main.yml 
+   75  cd - 
+   76  cd tests/
+   77  ls
+   78  ansible-playbook test.yml 
+   79  vim ../tasks/prerequisitos.yml 
+   80  ansible-playbook test.yml 
+   81  vim ../tasks/main.yml 
+   82  ansible-playbook test.yml 
+   83  vim ../tasks/prerequisitos.yml 
+   84  vim ../tasks/install_ubuntu.yml
+   85  vim ../tasks/install_centos.yml 
+   86  vim ../tasks/prerequisitos.yml 
+   87  ansible-playbook test.yml 
+   88  cd
+   89  logout
+   90  exit
+   91  cd
+   92  ss -lntp |grep 8140
+   93  puppetserver ca list --all
+   94  ss -lntp |grep 8140
+   95  puppetserver ca list --all
+   96  ls
+   97  puppetserver ca list --all
+   98  clear
+   99  puppet resource package pdk
+  100  puppet resource package pdk ensure=present
+  101  /etc/puppetlabs/code/modules
+  102  sudu su-
+  103  /etc/puppetlabs/code/modulos
+  104  /etc/puppetlabs/code/module
+  105  cd /etc/puppetlabs/code/module
+  106  cd /etc/puppetlabs/code/modules]
+  107  cd /etc/puppetlabs/code/
+  108  ls
+  109  cd /etc/puppetlabs/code/modules
+  110  ls
+  111  pdk new module mulher_gaviao
+  112  ls
+  113  cd /mulher_gaviao
+  114  cd /etc/puppetlabs/code/modules/mulher_gaviao
+  115  ls
+  116  cd manifest/
+  117  cd manifests
+  118  ls
+  119  >init.pp
+  120  ls
+  121  vim manifests
+  122  vim init.pp
+  123  vim manifests
+  124  vim init.pp
+  125  cd /etc/puppetlabs/code/environments/production/manifests/
+  126  ls
+  127  vim zattana.pp
+  128  vim ..files/puppet.conf
+  129  ls
+  130  cd /etc/puppetlabs/code/modules/mulher_gaviao/
+  131  ls
+  132  cd files/
+  133  ls
+  134  vim puppet.conf
+  135  cd ../
+  136  ls
+  137  cat manifests/init.pp 
+  138  cd /etc/puppetlabs/code/environments/production/
+  139  ls
+  140  cd manifests/
+  141  ls
+  142  cat zattana.pp 
+  143  vim zattana.pp
+  144  puppet agent -t --server devops.salas4linux.com.br
+  145  cd /etc/puppetlabs/code/modules/mulher_gaviao/
+  146  cd manifests/
+  147  vim init.pp 
+  148  puppet agent -t --server devops.salas4linux.com.br
+  149  cd
+  150  puppetserver ca list 
+  151  puppetserver ca list --all
+  152  puppet agent -t --server devops.salas4linux.com.br
+  153  ls
+  154  cd /etc/puppetlabs/
+  155  ls
+  156  cd puppet
+  157  cd ssl/ca/
+  158  ls
+  159  cd signed/
+  160  ls
+  161  rm docker.salas4linux.com.br.pem 
+  162  ls
+  163  cd 
+  164  ls
+  165  puppetserver ca list 
+  166  puppetserver ca sign --all
+  167  cd /etc/puppetlabs/code/modules/
+  168  pdk new module canario_negro
+  169  cd canario_negro/
+  170  cd manifests/
+  171  vim init.pp
+  172  puppet parser validade init.pp
+  173  puppet parser validate init.pp
+  174  vim init.pp]
+  175  ls1
+  176  cd manifests/
+  177  cd
+  178  cd manifests/
+  179  cd /etc/puppetlabs//code/modules/canario_negro/manifests/vim init.pp
+  180  cd /etc/puppetlabs//code/modules/canario_negro/manifests/
+  181  vim init.pp
+  182  puppet parser validate init.pp
+  183  cd
+  184  cd /etc/puppetlabs/code/environments/production/manifests/
+  185  ls
+  186  vim zattana.pp
+  187  vim init.pp
+  188  cd
+  189  cd /etc/puppetlabs/code/modules//canario_negro//manifests/
+  190  vim init.pp
+  191  cat init.pp 
+  192  vim init.pp 
+  193  cd ../
+  194  ls
+  195  cd files/
+  196  ls
+  197  cp ~/.bashrc ./bashrc_base
+  198  > bash_logout
+  199  vim bashrc_base 
+  200  vim bash_logout 
+  201  ls
+  202  cd 
+  203  cd /etc/puppetlabs/code/environments/production/manifests/
+  204  ls
+  205  vim zattana.pp 
+  206  logout
+  207  cd
+  208  logout
+  209  start
+  210  apt install upstart
+  211  start
+  212  services
+  213  clear
+  214  logout
+  215  ls
+  216  cd /etc/puppetlabs/code/modules/canario_negro/
+  217  ls
+  218  /usr/games/cowsay
+  219  vim /etc/profile
+  220  source /etc/profile
+  221  ls -a 
+  222  cat .bashrc 
+  223  ls
+  224  cd /etc/puppetlabs/code/modules/canario_negro/files/
+  225  ls
+  226  vim bashrc_base 
+  227  cd ../
+  228  cd manifests/
+  229  ls
+  230  vim init.pp 
+  231  puppet agent -t 
+  232  puppetserver ca list 
+  233  puppetserver ca list --all
+  234  puppet agent -t 
+  235  vin /etc/puppetlabs/code/modules/docker/manifests/init.pp
+  236  vim /etc/puppetlabs/code/modules/docker/manifests/init.pp
+  237  puppet agent -t 
+  238  vim /etc/puppetlabs/code/modules/docker/manifests/init.pp
+  239  puppet agent -t 
+  240  tail -f /var/log/syslog 
+  241  doc --version
+  242  docker ps
+  243  docker run --helper
+  244  docker run --help
+  245  uname -r
+  246  ps axu | wc -l
+  247  docker run debian ls /etc/
+  248  docker ps
+  249  docker ps -a
+  250  docker run -ti debian bash
+  251  uname -r
+  252  ps aux
+  253  apt update
+  254  apt install procps -y
+  255  ps axu
+  256  ps axu | wc -l
+  257  ip a
+  258  cd
+  259  logout
+  260  cd /etc/puppetlabs/code/modules/
+  261  ls7
+  262  ls
+  263  pdk new moduler docker
+  264  pdk new module docker
+  265  ls
+  266  cd /docker
+  267  cd docker/
+  268  cd manifests/
+  269  > ini.pp
+  270  rm -r ini.pp
+  271  > init.pp
+  272  vim init.pp
+  273  puppet parser validade init.pp
+  274  apt install pupṕe
+  275  apt install puppet-common
+  276  vim init.pp
+  277  puppet parser validade init.pp
+  278  puppet parser validate init.pp
+  279  clear
+  280  puppet parser validate init.pp
+  281  ls
+  282  cd
+  283  cd /etc/puppetlabs/code/environments/production/manifests/
+  284  ls
+  285  vim zattana.pp 
+  286  tail -f /var/log/syslog
+  287  ls
+  288  tail -f /var/log/syslog
+  289  vim init.pp
+  290  tail -f /var/log/syslog
+  291  ls
+  292  cd
+  293  cd /etc/puppetlabs/code/modules/docker/manifests/
+  294  ls
+  295  vim ini.pp
+  296  vim init.pp
+  297  ss -lntp 
+  298  systemctl start puppetserver 
+  299  cd
+  300  apt install puppetserver
+  301  systemctl start puppetserver 
+  302  tail -f /var/log/syslog
+  303  puppet agent -t
+  304  tail -f /var/log/syslog
+  305  dpkg -l | grep puppet 
+  306  sudo su - 
+  307  exit
+  308  cd infraagil/
+  309  history > historico_aula
